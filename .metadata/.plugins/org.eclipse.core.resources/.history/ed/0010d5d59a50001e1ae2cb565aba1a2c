@@ -1,0 +1,44 @@
+package tuan2_Account;
+
+public class AccountArray {
+	private  Account[] accounts;
+	public int SPTT=0;
+	public Account[] getAccount()
+	{
+		return accounts;
+	}
+	
+	public AccountArray()
+	{
+		super();
+		accounts =new Account[1];
+	}
+	
+	public boolean isExistingAccNumber(long accountNumber)
+	{
+		for(int i=0;i<SPTT; i++)
+			if (accountNumber == accounts[i].getSoTaiKhoan())
+					return true;
+		return false;
+	}
+	
+	public void add(Account acc) throws Exception
+	{
+		if (!isExistingAccNumber(acc.getSoTaiKhoan()))
+		{
+			if(SPTT == accounts.length)
+				accounts = copyArray(accounts, accounts.length*2);
+			accounts[SPTT++]=acc;
+		}
+		else 
+			throw new Exception("So TK da ton tai");
+	}
+	public Account[] copyArray(Account[] arr, int length)
+	{
+		Account[] newArr= new Account[length];
+		for(int i=0; i<SPTT; i++)
+			newArr[i]= arr[i];
+		return newArr;
+	}
+}
+
