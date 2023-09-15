@@ -7,6 +7,6 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="tuan2_Account.AccountArray"/>
-    <fullyQualifiedTypeName name="tuan2_Account.Account"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="tuan2_Account.Account"/>
 </qualifiedTypeNameHistroy>

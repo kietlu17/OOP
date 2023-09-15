@@ -37,10 +37,6 @@ public class TestAccount {
 					break;
 				}
 				case 3:{
-					deleteAcc();
-					displayTitle();
-					dsAcc=accountList.getAccount();
-					displayAcc(dsAcc);
 					break;
 				}
 				case 4:{
@@ -50,18 +46,7 @@ public class TestAccount {
 					displayAcc(dsAcc);
 					break;
 				}
-				case 5:{
-					System.out.println("Mảng ăn sau khi đã sắp xếp");
-					dsAcc=accountList.sort();
-					dsAcc=accountList.getAccount();
-					displayTitle();
-					displayAcc(dsAcc);
-					break;
-				}
-				case 6:{
-					System.out.println("GOOD BYE");
-					break;
-				}
+				
 
 			}
 		}while(opt != 6);
@@ -72,7 +57,7 @@ public class TestAccount {
 
 	public static void displayTitle()
 	{
-		String title = String.format("\t%-7s %20s %-30s %-20s", "NUMBER","ACCOUNT","FULL NAME","ACCOUNT BALANCE");
+		String title = String.format("\t%-7s %-20s %-30s %-20s", "NUMBER","ACCOUNT","FULL NAME","ACCOUNT BALANCE");
 		System.out.println(title);
 	}
 
@@ -176,21 +161,6 @@ public class TestAccount {
 		else
 		{
 			System.out.println("Không tìm thấy tài khoản");
-		}
-	}
-	public static void deleteAcc () throws Exception {
-		long accNum= inputLong("Nhập số tài khoản cần xóa ");
-		Account acc= accountList.searchAcc(accNum);
-		if(acc != null) {
-			String comfirm = inputString("Bạn có chắc chắc xóa? (y/Y)");
-			if(comfirm.equalsIgnoreCase("y")) {
-				accountList.deletAccount(accNum);
-				System.out.println("Đã xóa thành công");
-			}
-			else {
-				System.out.println("Xóa thất bại");
-				System.out.println("Không tìm thấy tài khoản");
-			}									
 		}
 	}
 }

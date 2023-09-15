@@ -50,18 +50,7 @@ public class TestAccount {
 					displayAcc(dsAcc);
 					break;
 				}
-				case 5:{
-					System.out.println("Mảng ăn sau khi đã sắp xếp");
-					dsAcc=accountList.sort();
-					dsAcc=accountList.getAccount();
-					displayTitle();
-					displayAcc(dsAcc);
-					break;
-				}
-				case 6:{
-					System.out.println("GOOD BYE");
-					break;
-				}
+				
 
 			}
 		}while(opt != 6);
@@ -72,7 +61,7 @@ public class TestAccount {
 
 	public static void displayTitle()
 	{
-		String title = String.format("\t%-7s %20s %-30s %-20s", "NUMBER","ACCOUNT","FULL NAME","ACCOUNT BALANCE");
+		String title = String.format("\t%-7s %-20s %-30s %-20s", "NUMBER","ACCOUNT","FULL NAME","ACCOUNT BALANCE");
 		System.out.println(title);
 	}
 

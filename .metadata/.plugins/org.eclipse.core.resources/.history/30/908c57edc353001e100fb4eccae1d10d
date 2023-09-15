@@ -1,7 +1,5 @@
 package tuan2_Account;
 
-import java.net.SocketTimeoutException;
-
 public class AccountArray {
 	private  Account[] accounts;
 	public int SPTT=0;
@@ -78,14 +76,12 @@ public class AccountArray {
 		Account[]sorted=copyArray(accounts, SPTT);
 		Account temp;
 		int n=SPTT;
-		for (int i=0; i<n-1;i++) 
-			for(int j=0;j<n-i-1;j++) 
+		for (int i=0; i<n-1;i++) {
+			for(int j=0;j<n-i-1;j++) {
 				if (sorted[j].getSoTienTrongTK()>sorted[j].getSoTienTrongTK()) {
-					temp = sorted[i];
-					sorted[j] = sorted[j+1];
-					sorted[j+1] = temp;
+					//tstsa
 			}
-		return sorted;
+		}
 	}
 }
 
