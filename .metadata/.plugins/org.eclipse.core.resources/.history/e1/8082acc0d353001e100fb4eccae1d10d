@@ -1,0 +1,56 @@
+package tuan2_HangThucPham;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+import tuan2_Account.Account;
+
+public class TestHangThucPham {
+	static ThucPhamArray foodList; 
+	public static void main(String[] args) {
+		System.out.println("Chuong Trinh Account");
+		foodList =new ThucPhamArray();
+		createDefaulF();
+		ThucPham[] dsTP = foodList.getFood();
+		displayTitle();
+		displayAcc(dsTP);
+	}
+
+	public static int menu()
+	{
+		int chon ;
+		System.out.println("****MENU****\n"+
+				"1.Nhập Cứng\n"+
+				"2.Thêm Hàng \n"+
+				"3.Xóa hàng\n"
+				+ "4.Cập Nhật\n"
+				+ "5.Sắp xếp\n"
+				+ "6.Thoát");
+		chon =nhapSoNguyen("Mời Bạn Chọn");
+		return chon;
+	}
+	static int nhapSoNguyen(String str) 
+	{
+		int x;
+		System.out.println(str);
+		Scanner scn=new Scanner(System.in);
+		x= scn.nextInt();
+		return x;
+	}
+	public static void createDefaulF() {
+		ThucPham f1 = new ThucPham("0001","BÚN", 10000,LocalDate.of(2021,05,16),LocalDate.of(2021,10,01));
+		foodList.add(f1);
+	}
+	public static void displayTitle()
+	{
+		String title = String.format("\t%-7s %20s %-30s %-20s %-20s", "CODE","NAME","PRICE","production date","expiration date");
+		System.out.println(title);
+	}
+	public static void displayAcc(ThucPham[] dsTP) {
+		for(int i=0;i<foodList.SPTT;i++)
+		{
+			System.out.printf("\t%-7d",i+1);
+			System.out.println(dsTP[i]);
+		}
+	}
+}

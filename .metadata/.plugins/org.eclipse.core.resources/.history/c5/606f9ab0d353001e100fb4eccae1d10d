@@ -1,0 +1,14 @@
+package tuan2_HangThucPham;
+
+
+public class ThucPhamArray {
+	private ThucPham[] foods;
+	public int SPTT = 0;
+	public ThucPham[] getFood() {
+		return foods;
+	}
+	public ThucPhamArray() {
+		super();
+		foods =new ThucPham[1];
+	}
+}
