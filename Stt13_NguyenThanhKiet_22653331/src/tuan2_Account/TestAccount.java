@@ -7,9 +7,9 @@ public class TestAccount {
 	public static void main(String[] args) throws Exception {
 
 				System.out.println("Chuong Trinh Account");
-				accountList =new AccountArray();
+				accountList = new AccountArray();
 		//		createDefaulAcc();
-				Account[] dsAcc=accountList.getAccount();
+		//		Account[] dsAcc=accountList.getAccount();
 		//		displayTitle();
 		//		displayAcc(dsAcc);
 		//		Account newAcc= createAcc();
@@ -23,7 +23,7 @@ public class TestAccount {
 			switch(opt) {
 				case 1:{
 					createDefaulAcc();
-					dsAcc=accountList.getAccount();
+					Account[] dsAcc=accountList.getAccount();
 					displayTitle();
 					displayAcc(dsAcc);
 					break;
@@ -32,28 +32,30 @@ public class TestAccount {
 					Account newAcc= createAcc();
 					accountList.add(newAcc);
 					displayTitle();
-					dsAcc=accountList.getAccount();
+					Account[] dsAcc=accountList.getAccount();
 					displayAcc(dsAcc);
 					break;
 				}
 				case 3:{
 					deleteAcc();
 					displayTitle();
-					dsAcc=accountList.getAccount();
+					Account[] dsAcc=accountList.getAccount();
 					displayAcc(dsAcc);
 					break;
 				}
 				case 4:{
 					updateAcc();
 					displayTitle();
-					dsAcc=accountList.getAccount();
+					Account[] dsAcc=accountList.getAccount();
 					displayAcc(dsAcc);
 					break;
 				}
 				case 5:{
 					System.out.println("Mảng ăn sau khi đã sắp xếp");
-					dsAcc=accountList.sort();
-					dsAcc=accountList.getAccount();
+					
+					
+					Account[]	dsAcc=accountList.sort();
+					//dsAcc=accountList.getAccount();
 					displayTitle();
 					displayAcc(dsAcc);
 					break;
@@ -130,8 +132,8 @@ public class TestAccount {
 	public static void createDefaulAcc() throws Exception
 	{
 		Account Acc1= new Account(10001234,"Nguyen Van Duc");
-		Account Acc2= new Account(10001235,"Nguyen Thanh An",100000);
-		Account Acc3= new Account(10001236,"Nguyen Anh Duc",250000);
+		Account Acc2= new Account(10001235,"Nguyen Thanh An",10000);
+		Account Acc3= new Account(10001236,"Nguyen Anh Duc",2500000);
 		Account Acc4= new Account(10001237,"Nguyen Van Trong",400000);
 		accountList.add(Acc1);
 		accountList.add(Acc2);

@@ -4,14 +4,17 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
+import tuan2_Account.Account;
+
 
 public class TestHangThucPham {
 	static ThucPhamArray foodList; 
 	public static void main(String[] args) throws Exception {
 		System.out.println("Chuong Trinh Account");
 		foodList =new ThucPhamArray();
+//		ThucPham[] dsTP;
 //		createDefaulF();
-//		ThucPham[] dsTP = foodList.getFood();
+		ThucPham[] dsTP = foodList.getFood();
 //		displayTitle();
 //		displayAcc(dsTP);
 		int opt ;
@@ -20,7 +23,7 @@ public class TestHangThucPham {
 			switch(opt) {
 				case 1:{
 					createDefaulF();
-					ThucPham[] dsTP = foodList.getFood();
+					dsTP = foodList.getFood();
 					displayTitle();
 					displayAcc(dsTP);
 					break;
@@ -28,10 +31,33 @@ public class TestHangThucPham {
 				case 2:{
 					ThucPham newf = createF();
 					foodList.add(newf);;
-					ThucPham[] dsTP = foodList.getFood();
+					dsTP = foodList.getFood();
 					displayTitle();
 					displayAcc(dsTP);
 					break;
+				}
+				case 3:{
+					deleteFood();
+					dsTP = foodList.getFood();
+					displayTitle();
+					displayAcc(dsTP);
+					break;
+				}
+				case 4:{
+					updateAcc();
+					dsTP = foodList.getFood();
+					displayTitle();
+					displayAcc(dsTP);
+					break;
+				}
+				case 5:{
+					System.out.println("Mảng sau khi đã sắp xếp (theo giá tiền tăng dần)");
+					dsTP = foodList.sort();
+					dsTP = foodList.getFood();
+					displayTitle();
+					displayAcc(dsTP);
+					break;
+					
 				}
 				case 6:{
 					System.out.println("GOOD BYE");
@@ -121,4 +147,49 @@ public class TestHangThucPham {
 	    LocalDate date = LocalDate.parse(inputString(""), f);
         return date;
 	}
+	public static void deleteFood () throws Exception {
+		String fCode= inputString("Nhập số mã hàng cần xóa ");
+		ThucPham food= foodList.searchFD(fCode);
+		if(food != null) {
+			String comfirm = inputString("Bạn có chắc chắc xóa? (y/Y)");
+			if(comfirm.equalsIgnoreCase("y")) {
+				foodList.deletFood(fCode);
+				System.out.println("Đã xóa thành công");
+			}
+			else {
+				System.out.println("Xóa thất bại");
+				System.out.println("Không tìm thấy tài khoản");
+			}									
+		}
+	}
+	public static void updateAcc () throws Exception {
+		String fCode= inputString("Nhập số mã hàng cần sửa ");
+		ThucPham food= foodList.searchFD(fCode);
+		if(food != null) {
+			System.out.println("Trước khi sửa ");
+			displayTitle();
+			System.out.println(food);
+			String name = inputString("\n Nhập tên hàng mới ");
+			double price = inputDouble("\n Nhập giá mới ");
+			LocalDate ngSX = inputDate("Nhập ngày sản xuất");
+			LocalDate ngHH = inputDate("Nhập ngày hết hạn");
+			food.setName(name);
+			food.setPrice(price);
+			food.setNgSX(ngSX);
+			food.setNgHH(ngHH);
+			foodList.update(food);
+		}
+		else
+		{
+			System.out.println("Không tìm thấy tài khoản");
+		}
+	}
+	public static double inputDouble(String s) {
+		double numDouble;
+		System.out.println(s);
+		Scanner sn = new Scanner(System.in);
+		numDouble = sn.nextFloat();
+		return numDouble;
+	}
+	
 }
