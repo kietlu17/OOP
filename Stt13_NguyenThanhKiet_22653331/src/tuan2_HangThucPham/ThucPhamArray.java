@@ -71,11 +71,11 @@ public class ThucPhamArray {
 		ThucPham temp;
 		int n = SPTT;
 		for (int i = 0; i < n - 1; i++) 
-			for(int j = 0; j < n - i - 1; j++) 
-				if (sorted[j].getPrice()>sorted[j].getPrice()) {
+			for(int j = i+1; j < n ; j++) 
+				if (sorted[i].getPrice()>sorted[j].getPrice()) {
 					temp = sorted[i];
-					sorted[j] = sorted[j + 1];
-					sorted[j + 1] = temp;
+					sorted[i] = sorted[j];
+					sorted[j] = temp;
 			}
 		return sorted;
 	}

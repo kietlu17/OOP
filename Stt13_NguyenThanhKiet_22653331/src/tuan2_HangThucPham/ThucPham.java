@@ -77,7 +77,7 @@ public class ThucPham {
 		if (kiemTraHetHan() == true) 
 			ghiChu="Hàng hết hạn";
 		
-		return String.format("%-4s %10s %15sVND \t %-20s %-20s %s", getCode(), getName(), getPrice(), daySX, dayHH,ghiChu);
+		return String.format("\t%-7s %20s %30s %30s %30s", getCode(), getName(), getPrice(), daySX, dayHH,ghiChu);
 	}
 	
 	

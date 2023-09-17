@@ -9,7 +9,7 @@ public class TestAccount {
 				System.out.println("Chuong Trinh Account");
 				accountList = new AccountArray();
 		//		createDefaulAcc();
-		//		Account[] dsAcc=accountList.getAccount();
+				Account[] dsAcc=accountList.getAccount();
 		//		displayTitle();
 		//		displayAcc(dsAcc);
 		//		Account newAcc= createAcc();
@@ -17,13 +17,14 @@ public class TestAccount {
 		//		displayTitle();
 		//		dsAcc=accountList.getAccount();
 		//		displayAcc(dsAcc);
+				
 		int opt;
 		do {
 			opt = menu();
 			switch(opt) {
 				case 1:{
 					createDefaulAcc();
-					Account[] dsAcc=accountList.getAccount();
+					dsAcc=accountList.getAccount();
 					displayTitle();
 					displayAcc(dsAcc);
 					break;
@@ -32,30 +33,27 @@ public class TestAccount {
 					Account newAcc= createAcc();
 					accountList.add(newAcc);
 					displayTitle();
-					Account[] dsAcc=accountList.getAccount();
+					dsAcc=accountList.getAccount();
 					displayAcc(dsAcc);
 					break;
 				}
 				case 3:{
 					deleteAcc();
 					displayTitle();
-					Account[] dsAcc=accountList.getAccount();
+					dsAcc=accountList.getAccount();
 					displayAcc(dsAcc);
 					break;
 				}
 				case 4:{
 					updateAcc();
 					displayTitle();
-					Account[] dsAcc=accountList.getAccount();
+					dsAcc=accountList.getAccount();
 					displayAcc(dsAcc);
 					break;
 				}
 				case 5:{
 					System.out.println("Mảng ăn sau khi đã sắp xếp");
-					
-					
-					Account[]	dsAcc=accountList.sort();
-					//dsAcc=accountList.getAccount();
+					dsAcc=accountList.sort();
 					displayTitle();
 					displayAcc(dsAcc);
 					break;

@@ -79,11 +79,11 @@ public class AccountArray {
 		Account temp;
 		int n=SPTT;
 		for (int i=0; i<n-1;i++) 
-			for(int j=0;j<n-i-1;j++) 
-				if (sorted[j].getSoTienTrongTK()>sorted[j].getSoTienTrongTK()) {
+			for(int j=i;j<n;j++) 
+				if (sorted[i].getSoTienTrongTK()>sorted[j].getSoTienTrongTK()) {
 					temp = sorted[i];
-					sorted[j] = sorted[j+1];
-					sorted[j+1] = temp;
+					sorted[i] = sorted[j];
+					sorted[j] = temp;
 			}
 		return sorted;
 	}

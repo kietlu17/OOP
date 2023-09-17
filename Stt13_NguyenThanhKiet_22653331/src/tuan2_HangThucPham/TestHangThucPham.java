@@ -17,6 +17,11 @@ public class TestHangThucPham {
 		ThucPham[] dsTP = foodList.getFood();
 //		displayTitle();
 //		displayAcc(dsTP);
+//		System.out.println("Mảng sau khi đã sắp xếp (theo giá tiền tăng dần)");
+//		dsTP = foodList.sort();
+//		//dsTP = foodList.getFood();
+//		displayTitle();
+//		displayAcc(dsTP);
 		int opt ;
 		do {
 			opt =  menu();
@@ -25,7 +30,7 @@ public class TestHangThucPham {
 					createDefaulF();
 					dsTP = foodList.getFood();
 					displayTitle();
-					displayAcc(dsTP);
+					displayFood(dsTP);
 					break;
 				}
 				case 2:{
@@ -33,29 +38,28 @@ public class TestHangThucPham {
 					foodList.add(newf);;
 					dsTP = foodList.getFood();
 					displayTitle();
-					displayAcc(dsTP);
+					displayFood(dsTP);
 					break;
 				}
 				case 3:{
 					deleteFood();
 					dsTP = foodList.getFood();
 					displayTitle();
-					displayAcc(dsTP);
+					displayFood(dsTP);
 					break;
 				}
 				case 4:{
-					updateAcc();
+					updateF();
 					dsTP = foodList.getFood();
 					displayTitle();
-					displayAcc(dsTP);
+					displayFood(dsTP);
 					break;
 				}
 				case 5:{
 					System.out.println("Mảng sau khi đã sắp xếp (theo giá tiền tăng dần)");
 					dsTP = foodList.sort();
-					dsTP = foodList.getFood();
 					displayTitle();
-					displayAcc(dsTP);
+					displayFood(dsTP);
 					break;
 					
 				}
@@ -104,10 +108,10 @@ public class TestHangThucPham {
 	}
 	public static void displayTitle()
 	{
-		String title = String.format("\t%-7s %20s %-30s %-20s %-20s", "CODE","NAME","PRICE","production date","expiration date");
+		String title = String.format("\t%-7s %7s %20s %30s %30s %30s","NUMBER", "CODE","NAME","PRICE","production date","expiration date");
 		System.out.println(title);
 	}
-	public static void displayAcc(ThucPham[] dsTP) {
+	public static void displayFood(ThucPham[] dsTP) {
 		for(int i=0;i<foodList.SPTT;i++)
 		{
 			System.out.printf("\t%-7d",i+1);
@@ -162,7 +166,7 @@ public class TestHangThucPham {
 			}									
 		}
 	}
-	public static void updateAcc () throws Exception {
+	public static void updateF () throws Exception {
 		String fCode= inputString("Nhập số mã hàng cần sửa ");
 		ThucPham food= foodList.searchFD(fCode);
 		if(food != null) {
