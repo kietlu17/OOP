@@ -23,7 +23,8 @@ public class SinhVien {
 	public void setDiaChi(String diaChi) {
 		this.diaChi = diaChi;
 	}
-	public void setSDT(String sdt) throws Exception {
+	
+	public void setSdt(String sdt) throws Exception {
 		if(sdt.length() == 10 && sdt.matches("\\d+"))
 			this.sdt = sdt;
 		else 

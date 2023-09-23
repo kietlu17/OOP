@@ -116,7 +116,7 @@ public class TestSV {
 		return str;
 	}
 	
-	public static SinhVien createSV() {
+	public static SinhVien createSV() throws Exception {
 		SinhVien sv;
 		int maSV;
 		String name;
@@ -130,7 +130,11 @@ public class TestSV {
 		name = inputString("Nhập Tên Sinh Viên");
 		SDT = inputString("Nhập Số Điện Thoại");
 		DC = inputString("Nhập Địa Chỉ");
-		sv = new SinhVien(maSV,name,SDT,DC);
+		sv = new SinhVien();
+		sv.setMaSV(maSV);
+		sv.setHoTen(name);
+		sv.setSdt(SDT);
+		sv.setDiaChi(DC);
 		return sv;
 	}
 	
@@ -145,7 +149,7 @@ public class TestSV {
 			String sdt = inputString("\n Nhập số điện thoại mới ");		
 			String dc = inputString("\n Nhập địa chỉ mới ");
 			sv.setHoTen(name);
-			sv.setSDT(sdt);
+			sv.setSdt(sdt);
 			sv.setDiaChi(dc);
 			svList.update(sv);
 		}
