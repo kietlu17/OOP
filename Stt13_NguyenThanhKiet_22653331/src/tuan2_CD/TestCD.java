@@ -3,7 +3,7 @@ package tuan2_CD;
 import java.util.Scanner;
 
 public class TestCD {
-	static CDArray cdList; 
+ 	static CDArray cdList; 
 	public static void main(String[] args) throws Exception {
 		System.out.println("Chuong Trinh CD");
 		cdList = new CDArray();
@@ -47,15 +47,19 @@ public class TestCD {
 					dsCD = cdList.sort();
 					displayTitle();
 					displayCD(dsCD);
-					break;
-					
+					break;				
 				}
 				case 6:{
 					System.out.println("GOOD BYE");
 					break;
 				}
-			}
-			
+				case 7:{
+					dsCD = cdList.getCD();
+					displayTitle();
+					displayCD(dsCD);
+					break;
+				}
+			}	
 		}while(opt != 6);
 	}
 
@@ -89,8 +93,7 @@ public class TestCD {
 		cdList.add(s1);
 		cdList.add(s2);
 		cdList.add(s3);
-		cdList.add(s4);
-		
+		cdList.add(s4);		
 	}
 	public static void displayTitle() {
 		String title = String.format("\t%-7s %10s %20s %20s %10s %20s", "NUMBER", "MaCD", "Ten", "Ca Si", "So Bai Hat", "Gia");

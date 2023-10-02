@@ -65,8 +65,8 @@ public class TestSV {
 		int chon ;
 		System.out.println("****MENU****\n"+
 				"1.Nhập Cứng\n"+
-				"2.Thêm Hàng \n"+
-				"3.Xóa hàng\n"
+				"2.Thêm Sinh Viên \n"+
+				"3.Xóa Sinh Viên\n"
 				+ "4.Cập Nhật\n"
 				+ "5.Sắp xếp\n"
 				+ "6.Thoát");
