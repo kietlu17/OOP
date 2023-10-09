@@ -27,16 +27,23 @@ public class KiemThuChuyenXe {
 				break;
 			}
 			case 3:{
-
+				xoa();
+				DS = xes.getDS();
+				Xuat(DS);
 				break;
 			}
 			case 4:{
-
+				sua();
+				DS = xes.getDS();
+				Xuat(DS);
 				break;
 			}
 			case 5:{
 				System.out.println("Mảng sau khi đã sắp xếp ");
-
+				xes.sortDoanhThu();
+				DS = xes.getDS();
+				Xuat(DS);
+				
 				break;
 
 			}
@@ -116,28 +123,28 @@ public class KiemThuChuyenXe {
 			}
 		}
 	}
-		 static ChuyenXe them() {
-			 String maCX, ten, soXe;
-			 double dThu;
-			 maCX = inputString("Nhap Ma Chuyen Xe");
-			 while(xes.timKiemViTri(maCX) != 1) {
-				 ten = inputString("Nhap ten Tai Xe");
-				 soXe = inputString("Nhap So Xe");
-				 dThu = inputDouble("Nhap Doanh thu");
-				 System.out.println("Nhap xe noi thanh [1] hoac xe ngoai thanh [2]");
-				 int chon = nhapSoNguyen("Chon");
-				 if(chon == 1) {
-					 int soTuyen = inputInt("Nhap So Tuyen");
-					 double soKm = inputDouble("Nhap So KM");
-					 cXe = new NoiThanh(maCX, ten, soXe, dThu, soTuyen, soKm);					 
-				 } else {
-					 int soTuyen = inputInt("Nhap So Tuyen");
-					 double soKm = inputDouble("Nhap So KM");
-					 cXe = new NgoaiThanh(maCX, ten, soXe, dThu, soTuyen, soKm);
-				 }				 
-			 }
-			 return cXe;
-		 }
+	static ChuyenXe them() {
+		String maCX, ten, soXe;
+		double dThu;
+		maCX = inputString("Nhap Ma Chuyen Xe");
+		while(xes.timKiemViTri(maCX) != 1) {
+			ten = inputString("Nhap ten Tai Xe");
+			soXe = inputString("Nhap So Xe");
+			dThu = inputDouble("Nhap Doanh thu");
+			System.out.println("Nhap xe noi thanh [1] hoac xe ngoai thanh [2]");
+			int chon = nhapSoNguyen("Chon");
+			if(chon == 1) {
+				int soTuyen = inputInt("Nhap So Tuyen");
+				double soKm = inputDouble("Nhap So KM");
+				cXe = new NoiThanh(maCX, ten, soXe, dThu, soTuyen, soKm);					 
+			} else {
+				int soTuyen = inputInt("Nhap So Tuyen");
+				double soKm = inputDouble("Nhap So KM");
+				cXe = new NgoaiThanh(maCX, ten, soXe, dThu, soTuyen, soKm);
+			}				 
+		}
+		return cXe;
+	}
 
 	static void nhapcung() throws Exception {
 		ChuyenXe x1, x2 ,x3, x4;
@@ -150,7 +157,7 @@ public class KiemThuChuyenXe {
 		xes.them(x3);
 		xes.them(x4);	
 	}
-	static String inputString (String s) {
+	static String inputString (String s) { 
 		String str;
 		System.out.println(s);
 		Scanner sn = new Scanner(System.in);
@@ -171,10 +178,10 @@ public class KiemThuChuyenXe {
 		numInt = sn.nextInt();
 		return numInt;
 	}
-	
+
 	static void Xuat(ArrayList<ChuyenXe> dS) {
 		for(ChuyenXe xe : xes.DS)
 			System.out.println(xe);
 	}
-	
+
 }
