@@ -1,11 +1,8 @@
 package tuan3_SachKeThuaTruTuong;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
-
-import tuan3_ChuyenXe.ChuyenXe;
 
 public class QLSach {
 	ArrayList<Sach> DS;
@@ -76,5 +73,5 @@ public class QLSach {
 	public void xoa(Sach sa) {
 		DS.remove(sa);
 	}
-	
+
 }

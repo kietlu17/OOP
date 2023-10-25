@@ -25,6 +25,8 @@ public class KiemThuSach {
 			}
 			case 2:{
 				them();
+				sas.them(sa);
+				
 				DS = sas.getSach();
 				Xuat(DS);
 				break;
