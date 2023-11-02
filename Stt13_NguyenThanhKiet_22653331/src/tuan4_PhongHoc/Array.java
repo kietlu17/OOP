@@ -124,11 +124,11 @@ public class Array {
 		return false;
 	}
 	
-	public Array layDsDatChuan() throws Exception {
-		Array kq = new Array();
+	public ArrayList<PhongHoc> layDsDatChuan() throws Exception {
+		ArrayList<PhongHoc> kq = new ArrayList<PhongHoc>();
 		for (PhongHoc p : dS) {
 			if(p.datChuan())
-				kq.them(p);
+				kq.add(p);
 		}
 		return kq;
 	}
