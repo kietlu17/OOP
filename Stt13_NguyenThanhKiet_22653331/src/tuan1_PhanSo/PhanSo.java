@@ -1,4 +1,4 @@
-package tuan2_PhanSo;
+package tuan1_PhanSo;
 
 public class PhanSo {
 	private int numerator;//tu so

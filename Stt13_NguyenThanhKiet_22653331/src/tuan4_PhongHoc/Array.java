@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class Array {
+public class Array implements PhuongThuc_DS {
 	ArrayList<PhongHoc> dS;
 	public Array () {
 		dS = new ArrayList<PhongHoc>();
@@ -45,7 +45,7 @@ public class Array {
 				DSPThiNghiem.add((ThiNghiem)p);
 		return DSPThiNghiem;
 	}
-	
+	@Override
 	public int timKiemViTri(int maPhong) {
 		PhongHoc findP = timKiem(maPhong);
 		if (findP != null)
@@ -131,5 +131,35 @@ public class Array {
 				kq.add(p);
 		}
 		return kq;
+	}
+
+	@Override
+	public boolean them() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int timKiemViTri() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public PhongHoc timKiem() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void xoa() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean capNhatSoMayTinh() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }
