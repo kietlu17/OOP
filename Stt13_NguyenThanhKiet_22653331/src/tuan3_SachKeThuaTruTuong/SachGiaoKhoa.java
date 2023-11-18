@@ -1,5 +1,6 @@
 package tuan3_SachKeThuaTruTuong;
 
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 
 public class SachGiaoKhoa extends Sach{
@@ -42,8 +43,10 @@ public class SachGiaoKhoa extends Sach{
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString() + "\n Tinh Trang: "+ isTinhTrang() + "\n Thanh Tien: " + thanhTien() ;
+		String s="mới";
+		if(tinhTrang==false) s="cũ";
+		DecimalFormat df = new DecimalFormat("#,##0.00");
+		return String.format("%s %15s %20s\n", super.toString(), s, df.format(thanhTien()));
 	}
 	
 	

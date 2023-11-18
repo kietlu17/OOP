@@ -15,7 +15,7 @@ public class MayTinh extends PhongHoc{
 	boolean datChuan() {
 		// TODO Auto-generated method stub
 		
-		if(super.dK1() && super.getDienTich()/1.5 <= soMayTinh )
+		if(dK1() && getDienTich()/1.5 <= getSoMayTinh() )
 			return true;
 		else
 			return false;
@@ -35,5 +35,8 @@ public class MayTinh extends PhongHoc{
 		super(maPhong, dayNha, dienTich, soBongDen);
 		// TODO Auto-generated constructor stub
 	}
-	
+	@Override
+	public String toString() {
+		return String.format("%s %15d\n", super.toString(), soMayTinh);
+	}
 }

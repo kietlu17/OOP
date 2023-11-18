@@ -10,18 +10,9 @@ import tuan2_Account.Account;
 public class TestHangThucPham {
 	static ThucPhamArray foodList; 
 	public static void main(String[] args) throws Exception {
-		System.out.println("Chuong Trinh Account");
+		System.out.println("Chuong Trinh Hang Thuc Pham");
 		foodList =new ThucPhamArray();
-//		ThucPham[] dsTP;
-//		createDefaulF();
 		ThucPham[] dsTP = foodList.getFood();
-//		displayTitle();
-//		displayAcc(dsTP);
-//		System.out.println("Mảng sau khi đã sắp xếp (theo giá tiền tăng dần)");
-//		dsTP = foodList.sort();
-//		//dsTP = foodList.getFood();
-//		displayTitle();
-//		displayAcc(dsTP);
 		int opt ;
 		do {
 			opt =  menu();

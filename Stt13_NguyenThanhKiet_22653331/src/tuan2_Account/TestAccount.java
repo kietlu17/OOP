@@ -8,16 +8,7 @@ public class TestAccount {
 
 				System.out.println("Chuong Trinh Account");
 				accountList = new AccountArray();
-		//		createDefaulAcc();
-				Account[] dsAcc=accountList.getAccount();
-		//		displayTitle();
-		//		displayAcc(dsAcc);
-		//		Account newAcc= createAcc();
-		//		accountList.add(newAcc);
-		//		displayTitle();
-		//		dsAcc=accountList.getAccount();
-		//		displayAcc(dsAcc);
-				
+				Account[] dsAcc=accountList.getAccount();			
 		int opt;
 		do {
 			opt = menu();

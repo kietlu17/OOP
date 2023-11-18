@@ -56,14 +56,14 @@ public class SinhVienArray {
 				svs[i] = svs[i+1];
 			SPTT--;
 		}else 
-			throw new Exception("Khong Tim Thay Thuc Pham");
+			throw new Exception("Khong Tim Thay Sinh Vien");
 	}
 	public void update(SinhVien sv) throws Exception {
 		int i = searchIndexOfF(sv.getMaSV());
 		if (i != -1)
 			svs[i] = sv;
 		else 
-			throw new Exception("Khong Tim Thay Thuc Pham");
+			throw new Exception("Khong Tim Thay Sinh Vien");
 	}
 	
 	public SinhVien[] sort() {

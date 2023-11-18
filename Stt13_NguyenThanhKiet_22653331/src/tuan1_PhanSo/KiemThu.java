@@ -99,11 +99,11 @@ public class KiemThu {
 		System.out.println("****MENU****\n"+
 							"1.Nhập cứng\n"+
 							"2.Nhập mềm\n"+
-							"3.Nhân"+
-							"4.Chia"+
-							"5.Cộng"+
-							"6.Trừ"+
-							"7.Nghịch đảo"+
+							"3.Nhân\n"+
+							"4.Chia\n"+
+							"5.Cộng\n"+
+							"6.Trừ\n"+
+							"7.Nghịch đảo\n"+
 							"8.Thoát");
 		chon =nhapSoNguyen("Mời Bạn Chọn");
 		return chon;

@@ -19,36 +19,64 @@ public class KiemThuSach {
 			switch(opt) {
 			case 1:{
 				nhapcung();
-				DS = sas.getSach();
+				System.out.println("Danh sách Sách Giáo Khoa");
+				DS = sas.getDSSachGiaoKhoa();
+				displayTitleSGK();
+				Xuat(DS);
+				System.out.println("Danh sách Sách Tham Khảo");
+				DS = sas.getDSSachThamKhao();
+				displayTitleSTK();
 				Xuat(DS);
 				break;
 			}
 			case 2:{
 				them();
-				sas.them(sa);
-				
-				DS = sas.getSach();
+				sas.them(sa);				
+				System.out.println("Danh sách Sách Giáo Khoa");
+				DS = sas.getDSSachGiaoKhoa();
+				displayTitleSGK();
+				Xuat(DS);
+				System.out.println("Danh sách Sách Tham Khảo");
+				DS = sas.getDSSachThamKhao();
+				displayTitleSTK();
 				Xuat(DS);
 				break;
 			}
 			case 3:{
 				xoa();
-				DS = sas.getSach();
+				System.out.println("Danh sách Sách Giáo Khoa");
+				DS = sas.getDSSachGiaoKhoa();
+				displayTitleSGK();
+				Xuat(DS);
+				System.out.println("Danh sách Sách Tham Khảo");
+				DS = sas.getDSSachThamKhao();
+				displayTitleSTK();
 				Xuat(DS);
 				break;
 			}
 			case 4:{
 				sua();
-				DS = sas.getSach();
+				System.out.println("Danh sách Sách Giáo Khoa");
+				DS = sas.getDSSachGiaoKhoa();
+				displayTitleSGK();
+				Xuat(DS);
+				System.out.println("Danh sách Sách Tham Khảo");
+				DS = sas.getDSSachThamKhao();
+				displayTitleSTK();
 				Xuat(DS);
 				break;
 			}
 			case 5:{
 				System.out.println("Mảng sau khi đã sắp xếp ");
 				sas.sortMaSach();
-				DS = sas.getSach();
+				System.out.println("Danh sách Sách Giáo Khoa");
+				DS = sas.getDSSachGiaoKhoa();
+				displayTitleSGK();
 				Xuat(DS);
-				
+				System.out.println("Danh sách Sách Tham Khảo");
+				DS = sas.getDSSachThamKhao();
+				displayTitleSTK();
+				Xuat(DS);
 				break;
 
 			}
@@ -194,8 +222,12 @@ public class KiemThuSach {
 	}
 
 	static void Xuat(ArrayList<Sach> dS) {
-		for(Sach sa : sas.DS)
+		int i = 0;
+		for(Sach sa: dS) {
+			i++;
+			System.out.printf("\t %-7d ",i);
 			System.out.println(sa);
+		}
 	}
 
 	public static LocalDate inputDate (String s) {
@@ -212,5 +244,14 @@ public class KiemThuSach {
 		Scanner sn = new Scanner(System.in);
 		bool = sn.nextBoolean();
 		return bool;
+	}
+	
+	public static void displayTitleSGK() {
+		String title=String.format("\t%-7s %-15s %-18s %-20s %-15s %-20s %10s %20s","STT", "Mã Sách","Ngày Xuất Bản","Đơn Giá", "Số Lượng","Nhà Xuất Bản","Tình Trạng", "Thành Tiền");
+		System.out.println(title);
+	}
+	public static void displayTitleSTK() {
+		String title=String.format("\t%-7s %-15s %-18s %-20s %-15s %-20s %10s %20s","STT", "Mã Sách","Ngày Xuất Bản","Đơn Giá", "Số Lượng","Nhà Xuất Bản","Thuế", "Thành Tiền");
+		System.out.println(title);
 	}
 }

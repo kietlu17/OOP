@@ -5,11 +5,12 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Objects;
 
-public class GiaoDich {
+public abstract class GiaoDich {
 	protected String MaGiaoDich;
 	protected LocalDate ngayGD;
 	protected double DonGia;
 	protected int SoLuong;
+	public abstract double thanhtien();
 	public String getMaGiaoDich() {
 		return MaGiaoDich;
 	}

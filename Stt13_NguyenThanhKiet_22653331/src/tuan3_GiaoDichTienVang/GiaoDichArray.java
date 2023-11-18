@@ -67,7 +67,7 @@ public class GiaoDichArray {
 			if(giaodich instanceof GiaoDichTien) {
 				i++;
 				GiaoDichTien giaodich1=(GiaoDichTien) giaodich;
-				Tong=Tong+giaodich1.thanhTien();
+				Tong=Tong+giaodich1.thanhtien();
 			}
 		}
 		return Tong/i;
@@ -75,7 +75,7 @@ public class GiaoDichArray {
 	public List<GiaoDich> getDanhSachGDTienLonHon1Ty(){
 		List<GiaoDich> DSGiaoDichTien= new ArrayList<GiaoDich>();
 		for(GiaoDich giaodich : Danhsach) {
-			if(giaodich instanceof GiaoDichTien && ((GiaoDichTien) giaodich).thanhTien()>1000000000) {
+			if(giaodich instanceof GiaoDichTien && ((GiaoDichTien) giaodich).thanhtien()>1000000000) {
 				DSGiaoDichTien.add( giaodich);
 				
 			}
@@ -86,7 +86,7 @@ public class GiaoDichArray {
 	public List<GiaoDich> getDanhSachGDVangLonHon1Ty(){
 		List<GiaoDich> DSGiaoDichVang= new ArrayList<GiaoDich>();
 		for(GiaoDich giaodich : Danhsach) {
-			if(giaodich instanceof GiaoDichVang && ((GiaoDichVang) giaodich).ThanhTien()>1000000000) {
+			if(giaodich instanceof GiaoDichVang && ((GiaoDichVang) giaodich).thanhtien()>1000000000) {
 				DSGiaoDichVang.add( giaodich);
 				
 			}

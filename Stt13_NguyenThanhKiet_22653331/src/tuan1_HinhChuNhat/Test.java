@@ -39,7 +39,7 @@ public class Test {
 		{
 			HinhChuNhat cn2=new HinhChuNhat(15,10);
 			System.out.println(cn2);
-			HinhChuNhat cn3=new HinhChuNhat(8,9);
+			HinhChuNhat cn3=new HinhChuNhat(10,9);
 			System.out.println(cn3);
 		}
 		static HinhChuNhat nhapMem()

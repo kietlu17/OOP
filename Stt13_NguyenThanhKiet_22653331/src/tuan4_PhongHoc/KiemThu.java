@@ -7,10 +7,11 @@ import tuan2_HangThucPham.ThucPham;
 
 
 public class KiemThu {
-	static Array ps;
+	static QLPhong ps;
 	static PhongHoc p;
 	public static void main(String[] args) throws Exception {
-		ps = new Array();
+		System.out.println("Chuong Trinh Quan Phong Hoc");
+		ps = new QLPhong() {}; 
 		ArrayList<PhongHoc> ds = ps.getPhong();
 		int opt;
 		do {
@@ -22,13 +23,33 @@ public class KiemThu {
 				}
 				case 1:{
 					nhapcung();
-					ds = ps.getPhong();
+					System.out.println("Danh Sách Phòng Lý Thuyết");
+					ds = ps.getDSPLyThuyet();
+					displayTitleLT();
+					Xuat(ds);
+					System.out.println("Danh Sách Phòng Máy Tính");
+					ds = ps.getDSPMayTinh();
+					displayTitleMT();
+					Xuat(ds);
+					System.out.println("Danh Sách Phòng Thí Nghiệm");
+					ds = ps.getDSPThiNghiem();
+					displayTitleTN();
 					Xuat(ds);
 					break;
 				}
 				case 2:{
 					nhapmen();
-					ds = ps.getPhong();
+					System.out.println("Danh Sách Phòng Lý Thuyết");
+					ds = ps.getDSPLyThuyet();
+					displayTitleLT();
+					Xuat(ds);
+					System.out.println("Danh Sách Phòng Máy Tính");
+					ds = ps.getDSPMayTinh();
+					displayTitleMT();
+					Xuat(ds);
+					System.out.println("Danh Sách Phòng Thí Nghiệm");
+					ds = ps.getDSPThiNghiem();
+					displayTitleTN();
 					Xuat(ds);
 					break;
 				}
@@ -37,53 +58,109 @@ public class KiemThu {
 					break;
 				}
 				case 4:{
-					ds = ps.getPhong();
+					System.out.println("Danh Sách Phòng Lý Thuyết");
+					ds = ps.getDSPLyThuyet();
+					displayTitleLT();
+					Xuat(ds);
+					System.out.println("Danh Sách Phòng Máy Tính");
+					ds = ps.getDSPMayTinh();
+					displayTitleMT();
+					Xuat(ds);
+					System.out.println("Danh Sách Phòng Thí Nghiệm");
+					ds = ps.getDSPThiNghiem();
+					displayTitleTN();
 					Xuat(ds);
 					break;
 				}
 				case 5:{
-					ps.layDsDatChuan();
-					ds = ps.getPhong();
+					ds=ps.layDsDatChuan();					
 					Xuat(ds);
 					break;
 				}
 				case 6:{
 					ps.sortDayNha();
-					ds = ps.getPhong();
+					System.out.println("Danh Sách Phòng Lý Thuyết");
+					ds = ps.getDSPLyThuyet();
+					displayTitleLT();
+					Xuat(ds);
+					System.out.println("Danh Sách Phòng Máy Tính");
+					ds = ps.getDSPMayTinh();
+					displayTitleMT();
+					Xuat(ds);
+					System.out.println("Danh Sách Phòng Thí Nghiệm");
+					ds = ps.getDSPThiNghiem();
+					displayTitleTN();
 					Xuat(ds);
 					break;
 				}
 				case 7:{
 					ps.sortDienTich();
-					ds= ps.getPhong();
+					System.out.println("Danh Sách Phòng Lý Thuyết");
+					ds = ps.getDSPLyThuyet();
+					displayTitleLT();
+					Xuat(ds);
+					System.out.println("Danh Sách Phòng Máy Tính");
+					ds = ps.getDSPMayTinh();
+					displayTitleMT();
+					Xuat(ds);
+					System.out.println("Danh Sách Phòng Thí Nghiệm");
+					ds = ps.getDSPThiNghiem();
+					displayTitleTN();
 					Xuat(ds);
 					break;
 				}
 				case 8:{
 					ps.sortSoBongDen();
-					ds = ps.getPhong();
+					System.out.println("Danh Sách Phòng Lý Thuyết");
+					ds = ps.getDSPLyThuyet();
+					displayTitleLT();
+					Xuat(ds);
+					System.out.println("Danh Sách Phòng Máy Tính");
+					ds = ps.getDSPMayTinh();
+					displayTitleMT();
+					Xuat(ds);
+					System.out.println("Danh Sách Phòng Thí Nghiệm");
+					ds = ps.getDSPThiNghiem();
+					displayTitleTN();
 					Xuat(ds);
 					break;
 				}
 				case 9:{
 					capNhatPhongHoc();
-					ds = ps.getPhong();
+					System.out.println("Danh Sách Phòng Lý Thuyết");
+					ds = ps.getDSPLyThuyet();
+					displayTitleLT();
+					Xuat(ds);
+					System.out.println("Danh Sách Phòng Máy Tính");
+					ds = ps.getDSPMayTinh();
+					displayTitleMT();
+					Xuat(ds);
+					System.out.println("Danh Sách Phòng Thí Nghiệm");
+					ds = ps.getDSPThiNghiem();
+					displayTitleTN();
 					Xuat(ds);
 					break;
 				}
 				case 10:{
 					xoa();
-					ds = ps.getPhong();
+					System.out.println("Danh Sách Phòng Lý Thuyết");
+					ds = ps.getDSPLyThuyet();
+					displayTitleLT();
+					Xuat(ds);
+					System.out.println("Danh Sách Phòng Máy Tính");
+					ds = ps.getDSPMayTinh();
+					displayTitleMT();
+					Xuat(ds);
+					System.out.println("Danh Sách Phòng Thí Nghiệm");
+					ds = ps.getDSPThiNghiem();
+					displayTitleTN();
 					Xuat(ds);
 					break;
 				}
 				case 11:{
-					System.out.printf("Tổng các phòng học: "+ps.tongSoPhong());
+					int a = ps.tongSoPhong();
+					System.out.printf("Tổng các phòng học: %d", a);
 					break;				
-				}
-				case 12:{
-					System.out.printf("Các phòng học có 60 máy: "+ps.layDsPhong60May());
-					break;	
 				}
 			}
 		}while(opt != 0);
@@ -92,7 +169,7 @@ public class KiemThu {
 	static int menu()
 	{
 		int chon ;
-		System.out.println("****MENU****\n"+
+		System.out.println("\n****MENU****\n"+
 				"0. Kết thúc\n"
 				+ "1. Khởi tạo danh sách\n" 
 				+ "2. Thêm phòng học\n" 
@@ -105,7 +182,7 @@ public class KiemThu {
 				+ "9. Cập nhật số máy tính\n" 
 				+ "10. Xóa phòng học theo mã\n"
 				+ "11. Tính tổng số phòng học\n" 
-				+ "12. Lấy danh sách các phòng máy có 60 máy tính\n");
+				);
 		chon = nhapSoNguyen("Mời Bạn Chọn");
 		return chon;
 	}
@@ -133,8 +210,12 @@ public class KiemThu {
 	}
 	
 	static void Xuat(ArrayList<PhongHoc> ds) {
-		for(PhongHoc p : ps.dS)
+		int i = 0;
+		for(PhongHoc p : ds) {
+			i++;
+			System.out.printf("\t %-7d ",i);
 			System.out.println(p);
+		}
 	}
 	static void nhapmen() throws Exception {
 		System.out.print("\t1. Phòng học lý thuyết\n" + "\t2. Phòng máy tính\n" + "\t3. Phòng thí nghiệm\n");
@@ -203,11 +284,23 @@ public class KiemThu {
 			if (timPhong == null)
 				System.out.println("Không tìm thấy!");
 			else {
-				if(timPhong instanceof LyThuyet)
+				if(timPhong instanceof LyThuyet) {
+					displayTitleLT();
+					System.out.printf("\t %10s","");
 					System.out.print(timPhong);
-				else if(timPhong instanceof MayTinh)
+				}
+					
+				else if(timPhong instanceof MayTinh) {
+					displayTitleMT();
+					System.out.printf("\t %10s","");
 					System.out.print(timPhong);
-				else System.out.print(timPhong);
+				}
+					
+				else {
+					displayTitleTN();
+					System.out.printf("\t %10s","");
+					System.out.print(timPhong);
+				}
 			}
 		}
 		
@@ -271,5 +364,20 @@ public class KiemThu {
 				}else 
 					System.out.println("Không tồn tại phòng này");
 			}
+		}
+		
+		public static void displayTitleLT() {
+			String title=String.format("\t%-7s %-15s %18s %15s %15s %12s","STT", "Mã Phòng","Dãy Nhà","Diện Tích", "Số Bóng Đèn","Máy Chiếu");
+			System.out.println(title);
+		}
+		
+		public static void displayTitleMT() {
+			String title=String.format("\t%-7s %-15s %18s %15s %15s %12s","STT", "Mã Phòng","Dãy Nhà","Diện Tích", "Số Bóng Đèn","Số Máy Tính");
+			System.out.println(title);
+		}
+		
+		public static void displayTitleTN() {
+			String title=String.format("\t%-7s %-15s %18s %15s %15s %14s %12s %12s","STT", "Mã Phòng","Dãy Nhà","Diện Tích", "Số Bóng Đèn","Chuyên Ngành", "Sức Chứa", "Bồn Rửa");
+			System.out.println(title);
 		}
 	}

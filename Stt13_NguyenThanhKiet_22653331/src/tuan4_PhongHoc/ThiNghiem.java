@@ -51,7 +51,7 @@ public class ThiNghiem extends PhongHoc {
 	@Override
 	boolean datChuan() {
 		// TODO Auto-generated method stub
-		if (super.dK1() && bonRua)
+		if (dK1() && bonRua == true)
 			return true;
 		else
 			return false;
@@ -59,7 +59,8 @@ public class ThiNghiem extends PhongHoc {
 	@Override
 	public String toString() {
 		String s = "có";
-		if(bonRua == false) s = "không";
+		if(bonRua == false)
+			s = "không";
 		return String.format("%s %15s %15d %15s\n", super.toString(), chuyenNganh, sucChua, s);
 	}
 }

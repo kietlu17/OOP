@@ -27,14 +27,17 @@ public class GiaoDichVang extends GiaoDich {
 		super(maGiaoDich, ngayGD, donGia, soLuong);
 		// TODO Auto-generated constructor stub
 	}
-	public double ThanhTien() {
-		double dongia = this.getDonGia();
-		double soluong = this.getSoLuong();
-		return dongia*soluong;
-	}
+
 	@Override
 	public String toString() {
 		String str= String.format("%-10s", getLoaiVang());
 		return super.toString() + str;
+	}
+
+	@Override
+	public double thanhtien() {
+		double dongia = this.getDonGia();
+		double soluong = this.getSoLuong();
+		return dongia*soluong;
 	}
 }

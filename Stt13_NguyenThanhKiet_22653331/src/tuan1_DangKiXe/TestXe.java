@@ -75,7 +75,7 @@ public static int menu()
 {
 	int chon ;
 	System.out.println("****MENU****\n"+
-						"1.Nhập cứng\n"+
+						"1.Nhập mềm\n"+
 						"2.Xuất thông tin thuế trước bạ\n"+
 						"3.Thoát");
 	chon =nhapSoNguyen("Mời Bạn Chọn");

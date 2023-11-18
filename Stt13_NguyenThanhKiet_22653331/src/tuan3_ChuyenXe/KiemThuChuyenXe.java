@@ -127,7 +127,7 @@ public class KiemThuChuyenXe {
 		String maCX, ten, soXe;
 		double dThu;
 		maCX = inputString("Nhap Ma Chuyen Xe");
-		while(xes.timKiemViTri(maCX) != 1) {
+		if(xes.timKiemViTri(maCX) != 1) {
 			ten = inputString("Nhap ten Tai Xe");
 			soXe = inputString("Nhap So Xe");
 			dThu = inputDouble("Nhap Doanh thu");

@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class Array implements PhuongThuc_DS {
+public abstract class QLPhong implements PhuongThuc_DS{
 	ArrayList<PhongHoc> dS;
-	public Array () {
+	public QLPhong () {
 		dS = new ArrayList<PhongHoc>();
 	}
 	
 	public ArrayList<PhongHoc> getPhong(){
 		return dS;
 	}
-	
+	@Override
 	public boolean them(PhongHoc p) throws Exception {
 		if(dS.contains(p) == false)
 			dS.add(p);
@@ -52,14 +52,13 @@ public class Array implements PhuongThuc_DS {
 			return dS.indexOf(maPhong);
 		return -1;
 	}
-	
 	public PhongHoc timKiem (int maPhong) {
 		for(PhongHoc p : dS)
 			if(p.getMaPhong() == maPhong)
 				return p;
 		return null;
 	}
-	
+	@Override
 	public void sortDienTich() {
 		Collections.sort(dS, new Comparator<PhongHoc>() {
 			@Override
@@ -71,7 +70,7 @@ public class Array implements PhuongThuc_DS {
 			}
 		});
 	}
-	
+	@Override
 	public void sortDayNha() {
 		Collections.sort(dS, new Comparator<PhongHoc>() {
 			@Override
@@ -84,6 +83,7 @@ public class Array implements PhuongThuc_DS {
 		});
 	}
 	
+	@Override
 	public void sortSoBongDen() {
 		Collections.sort(dS, new Comparator<PhongHoc>() {
 			@Override
@@ -95,23 +95,19 @@ public class Array implements PhuongThuc_DS {
 			}
 		});
 	}
+	@Override
 	public void xoa(PhongHoc p) {
 		dS.remove(p);
 	}
-	
+	@Override
 	public int tongSoPhong() {
-		return dS.size();
+		int i=0;
+		for(PhongHoc p :dS)
+			i++;
+		return i;
 	}
-	public Array layDsPhong60May() throws Exception {
-		Array kq = new Array();
-		for (PhongHoc p : dS) {
-			if (p instanceof MayTinh)
-				if(((MayTinh) p).getSoMayTinh() == 60) {
-				kq.them(p);
-			}
-		}
-		return kq;
-	}
+	
+	
 	public boolean capNhatSoMayTinh(int maPhong, int soMayTinh) {
 		for (PhongHoc p : dS) {
 			if (p instanceof MayTinh) {
@@ -123,43 +119,14 @@ public class Array implements PhuongThuc_DS {
 		}
 		return false;
 	}
-	
-	public ArrayList<PhongHoc> layDsDatChuan() throws Exception {
+	@Override
+	public ArrayList<PhongHoc> layDsDatChuan(){
 		ArrayList<PhongHoc> kq = new ArrayList<PhongHoc>();
-		for (PhongHoc p : dS) {
+		for(PhongHoc p : dS)
 			if(p.datChuan())
 				kq.add(p);
-		}
 		return kq;
 	}
 
-	@Override
-	public boolean them() {
-		// TODO Auto-generated method stub
-		return false;
-	}
 
-	@Override
-	public int timKiemViTri() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public PhongHoc timKiem() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void xoa() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public boolean capNhatSoMayTinh() {
-		// TODO Auto-generated method stub
-		return false;
-	}
 }

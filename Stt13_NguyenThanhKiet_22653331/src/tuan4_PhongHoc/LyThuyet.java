@@ -28,7 +28,7 @@ public class LyThuyet extends PhongHoc {
 
 	@Override
 	boolean datChuan() {
-		if(mayChieu && super.dK1() )
+		if(mayChieu == true && dK1() )
 			return true;
 		else
 			return false;

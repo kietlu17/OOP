@@ -35,16 +35,17 @@ public class GiaoDichTien extends GiaoDich{
 			throw new Exception("Loại phải là vn, usd hoac euro!");
 		}
 	}
-	public double thanhTien()
-	{
-		double soluong= this.getSoLuong();
-		double donGia= this.getDonGia();
-		String TyGia= this.getTyGia();
-		return TyGia.equalsIgnoreCase("vn")? soluong*donGia : soluong*donGia;
-	}
 	@Override
 	public String toString() {
 		String str= String.format("%-13s", getTyGia());
 		return super.toString() + str;
+	}
+
+	@Override
+	public double thanhtien() {
+		double soluong= this.getSoLuong();
+		double donGia= this.getDonGia();
+		String TyGia= this.getTyGia();
+		return TyGia.equalsIgnoreCase("vn")? soluong*donGia : soluong*donGia;
 	}
 }

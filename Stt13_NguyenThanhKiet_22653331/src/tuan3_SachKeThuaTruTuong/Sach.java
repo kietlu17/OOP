@@ -1,6 +1,8 @@
 package tuan3_SachKeThuaTruTuong;
 
+import java.text.DecimalFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 public abstract class Sach {
@@ -74,9 +76,9 @@ public abstract class Sach {
 
 	@Override
 	public String toString() {
-		return "Sach [maSach=" + maSach + ", soLuong=" + soLuong + ", nXB=" + nXB + ", donGia=" + donGia + ", ngayNhap="
-				+ ngayNhap + "]";
-	} 
-	
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		DecimalFormat df = new DecimalFormat("#,##0.00");
+		return String.format("%-10s %15s %20s %15d %20s", maSach, dtf.format(ngayNhap), df.format(donGia), soLuong, nXB);
+	}
 	
 }

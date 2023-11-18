@@ -94,7 +94,7 @@ public class DanhSachGiaoDich {
 	public List<GiaoDich> getDanhSachGDDatThang9(){
 		List<GiaoDich> DSGiaoDichDatT9= new ArrayList<GiaoDich>();
 		for(GiaoDich giaodich : Danhsach) {
-			if(giaodich instanceof GiaoDichDat && giaodich.getNgayGD().getYear()==2013&&giaodich.getNgayGD().getMonthValue()==9) {
+			if(giaodich instanceof GiaoDichDat && giaodich.getNgayGD().getYear()==2023&&giaodich.getNgayGD().getMonthValue()==9) {
 				DSGiaoDichDatT9.add( giaodich);
 				
 			}
@@ -105,7 +105,7 @@ public class DanhSachGiaoDich {
 	public List<GiaoDich> getDanhSachGDNhaThang9(){
 		List<GiaoDich> DSGiaoDichNhaT9= new ArrayList<GiaoDich>();
 		for(GiaoDich giaodich : Danhsach) {
-			if(giaodich instanceof GiaoDichNha && giaodich.getNgayGD().getYear()==2013&&giaodich.getNgayGD().getMonthValue()==9) {
+			if(giaodich instanceof GiaoDichNha && giaodich.getNgayGD().getYear()==2023&&giaodich.getNgayGD().getMonthValue()==9) {
 				DSGiaoDichNhaT9.add( giaodich);
 				
 			}

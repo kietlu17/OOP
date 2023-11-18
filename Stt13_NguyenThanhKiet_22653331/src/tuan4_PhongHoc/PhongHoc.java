@@ -3,10 +3,10 @@ package tuan4_PhongHoc;
 import java.util.Objects;
 
 public abstract class PhongHoc {
-	private int maPhong;
-	private String dayNha;
-	private double dienTich;
-	private int soBongDen;
+	protected int maPhong;
+	protected String dayNha;
+	protected double dienTich;
+	protected int soBongDen;
 	abstract boolean datChuan();
 	@Override
 	public int hashCode() {
@@ -65,6 +65,6 @@ public abstract class PhongHoc {
 			return false;
 	}
 	public String toString() {
-		return String.format("%-10s %-15s %15.2f %15d", maPhong, dayNha, dienTich, soBongDen);
+		return String.format("%-10s %20s %15.2f %15d", maPhong, dayNha, dienTich, soBongDen);
 	}
 }
